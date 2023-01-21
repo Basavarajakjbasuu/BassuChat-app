@@ -62,8 +62,8 @@ const ChatElement = ({ id, name, img, msg, time, unread, online }) => {
 				borderRadius: 1,
 				backgroundColor:
 					theme.palette.mode === 'light'
-						? '#F8FAFF'
-						: theme.palette.background.paper
+						? '#fff'
+						: theme.palette.background.default
 			}}
 			p={2}>
 			<Stack
@@ -82,7 +82,7 @@ const ChatElement = ({ id, name, img, msg, time, unread, online }) => {
 						<Avatar src={img} />
 					)}
 
-					<Stack spacing={0.3} sx={{ overflow: 'hidden' }}>
+					<Stack spacing={0.3}>
 						<Typography variant="subtitle2">{name}</Typography>
 						<Typography variant="caption">{msg}</Typography>
 					</Stack>
@@ -106,7 +106,6 @@ const Chats = () => {
 		<Box
 			sx={{
 				position: 'relative',
-
 				width: 320,
 				backgroundColor:
 					theme.palette.mode === 'light'
